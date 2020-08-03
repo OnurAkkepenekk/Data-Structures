@@ -1,8 +1,8 @@
 /**
 * @author onur akkepenek --> e-mail: akkepenek38@gmail.com
 * @date 11 Ekim 2019 Cumartesi
-* @brief bu kod parçacıgı , bir sınıfta verilen bir odevin puanlarının ve istatistiklerinin listelenmesi,
-gerektiğinde yanlıs girilen bir notun degistirilmesi simulasyonudur.
+* @brief bu kod parÃ§acÃ½gÃ½ , bir sÃ½nÃ½fta verilen bir odevin puanlarÃ½nÃ½n ve istatistiklerinin listelenmesi,
+gerektiÃ°inde yanlÃ½s girilen bir notun degistirilmesi simulasyonudur.
 */
 #include<iostream>
 #include<stdio.h>
@@ -17,7 +17,7 @@ gerektiğinde yanlıs girilen bir notun degistirilmesi simulasyonudur.
 #include<ctime>
 using namespace std;
 /**
-* @brief	: Ogrencileri bir düzen icinde tutmak icin olusturulan dinamik bir structtır.
+* @brief	: Ogrencileri bir dÃ¼zen icinde tutmak icin olusturulan dinamik bir struct'tir.
 * @see main	: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
 */
 typedef struct student {
@@ -26,10 +26,10 @@ typedef struct student {
 	int grade;
 }student;
 /**
-* @brief				: Bu fonksiyon random olarak harfleri alarak bir ogrenci isim blogu olustur ve struct icinde kayitta tutulur.
+* @brief			: Bu fonksiyon random olarak harfleri alarak bir ogrenci isim blogu olustur ve struct icinde kayitta tutulur.
 * @param *student		: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
-* @see main				: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
+* @param studentNumber		: Ogrenci sayisidir.
+* @see main			: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
 */
 void isimAtama(struct student* student, int& studentNumber)
 {
@@ -49,10 +49,10 @@ void isimAtama(struct student* student, int& studentNumber)
 	}
 }
 /**
-* @brief				: Bu fonksiyon random olarak ogrenci numarasini olusturur ve struct icinde kayitta tutulur.
+* @brief			: Bu fonksiyon random olarak ogrenci numarasini olusturur ve struct icinde kayitta tutulur.
 * @param	*student	: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
-* @see main				: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
+* @param studentNumber		: Ogrenci sayisidir.
+* @see main			: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
 */
 void idAtama(struct student* student, int& studentNumber)
 {
@@ -64,16 +64,16 @@ void idAtama(struct student* student, int& studentNumber)
 		}
 		else
 		{
-			student[i].id = student[0].id + j;// sistematik olarak öğrenci numaralarına +1 ekler.
+			student[i].id = student[0].id + j;// sistematik olarak Ã¶Ã°renci numaralarÃ½na +1 ekler.
 			j++;
 		}
 	}
 }
 /**
-* @brief				: Bu fonksiyon her ogrenciye random olarak bir not atar ve structta tutulur.
+* @brief			: Bu fonksiyon her ogrenciye random olarak bir not atar ve structta tutulur.
 * @param	*student	: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
-* @see main				: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
+* @param studentNumber		: Ogrenci sayisidir.
+* @see main			: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
 */
 void notAtama(struct student* student, int& studentNumber) {
 	for (int i = 0; i < studentNumber; i++)
@@ -82,10 +82,10 @@ void notAtama(struct student* student, int& studentNumber) {
 	}
 }
 /**
-* @brief				: Bu fonksiyon pointer struct içinde yer alan ogrencilerden min ve max notu alan ögrencileri yazdirir.
+* @brief			: Bu fonksiyon pointer struct iÃ§inde yer alan ogrencilerden min ve max notu alan Ã¶grencileri yazdirir.
 * @param	*student	: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
-* @see main				: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
+* @param studentNumber		: Ogrenci sayisidir.
+* @see main			: Fonksiyonun hangi amacla cagirildigini inceleyiniz.
 */
 void MinMaxYazdirma(struct student* student, int& studentNumber)
 {
@@ -111,7 +111,7 @@ void MinMaxYazdirma(struct student* student, int& studentNumber)
 	{
 		if (student[i].grade == min)
 		{
-			cout << "Minimum değer : " << min << " ( " << student[i].id << " numaralı " << "," << student[i].name << " isimli öğrenci )" << endl;
+			cout << "Minimum deÃ°er : " << min << " ( " << student[i].id << " numaralÃ½ " << "," << student[i].name << " isimli Ã¶Ã°renci )" << endl;
 		}
 
 	}
@@ -119,7 +119,7 @@ void MinMaxYazdirma(struct student* student, int& studentNumber)
 	{
 		if (student[i].grade == max)
 		{
-			cout << "Maxsimum değer: " << max << " ( " << student[i].id << " numaralı " << "," << student[i].name << " isimli öğrenci )" << endl;
+			cout << "Maxsimum deÃ°er: " << max << " ( " << student[i].id << " numaralÃ½ " << "," << student[i].name << " isimli Ã¶Ã°renci )" << endl;
 		}
 
 	}
@@ -127,10 +127,10 @@ void MinMaxYazdirma(struct student* student, int& studentNumber)
 
 }
 /**
-* @brief				: Bu fonksiyon pointer struct icinde yer alan ogrencilerin ortalamasini dondurur.
+* @brief			: Bu fonksiyon pointer struct icinde yer alan ogrencilerin ortalamasini dondurur.
 * @param *student		: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
-* @return				: Ortalama bilgisi.
+* @param studentNumber		: Ogrenci sayisidir.
+* @return			: Ortalama bilgisi.
 */
 float Ortalama(struct student* student, int& studentNumber) {
 	float average;
@@ -144,15 +144,15 @@ float Ortalama(struct student* student, int& studentNumber) {
 	return average;
 }
 /**
-* @brief				: Bu fonksiyon yanlis girilen yanlis bir notun degistirilmesini saglar.
+* @brief			: Bu fonksiyon yanlis girilen yanlis bir notun degistirilmesini saglar.
 * @param student		: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
+* @param studentNumber		: Ogrenci sayisidir.
 */
 void DegisimMenusu(struct student* student, int& studentNumber)
 {
 	int newNo, counter = 0;
 	int newGrade;
-	cout << "Ögrenci id giriniz :";
+	cout << "Ã–grenci id giriniz :";
 	cin >> newNo;
 
 	for (int i = 0; i < studentNumber; i++)
@@ -160,11 +160,11 @@ void DegisimMenusu(struct student* student, int& studentNumber)
 		if (student[i].id == newNo)
 		{
 			counter++;
-			cout << student[i].id << "( " << student[i].name << " )" << "ögrencisi için yeni notu ( " << student[i].grade << " )giriniz:";
+			cout << student[i].id << "( " << student[i].name << " )" << "Ã¶grencisi iÃ§in yeni notu ( " << student[i].grade << " )giriniz:";
 			cin >> newGrade;
 			if (cin.fail())
 			{
-				cout << "Geçersiz bir not girdiniz !!!" << endl;
+				cout << "GeÃ§ersiz bir not girdiniz !!!" << endl;
 				system("pause");
 				exit(0);
 			}
@@ -175,9 +175,9 @@ void DegisimMenusu(struct student* student, int& studentNumber)
 			}
 
 		}
-		if (newNo == 0 || newNo < 0)//Sayı istenen yerde harf veya - bir değer girildiği taktirde uyarı veren kod bloğu.
+		if (newNo == 0 || newNo < 0)//Sayi istenen yerde harf veya - bir deger girildigi taktirde uyari veren kod blogu.
 		{
-			cout << "Lütfen sayı giriniz !!!!!! " << endl;
+			cout << "LÃ¼tfen sayi giriniz !!!!!! " << endl;
 			system("Pause");
 			exit(0);
 
@@ -185,22 +185,22 @@ void DegisimMenusu(struct student* student, int& studentNumber)
 	}
 	if (counter == 0)
 	{
-		cout << "Yanlış bir id girdiniz !!" << endl;
+		cout << "YanlÃ½Ã¾ bir id girdiniz !!" << endl;
 		cout << "Tekrar id giriniz :";
 		DegisimMenusu(student, studentNumber);
 	}
 }
 /**
-* @brief				: Bu fonksiyon ogrenci bilgilerini ekrana yazdirir.
+* @brief			: Bu fonksiyon ogrenci bilgilerini ekrana yazdirir.
 * @param student		: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
+* @param studentNumber		: Ogrenci sayisidir.
 */
 void listelemeMenusu(struct student* student, int& studentNumber) {
 
 	int i;
-	cout << left << setw(35) << "Öğrenci ID";
-	cout << left << setw(35) << "Öğrenci İsmi";
-	cout << left << setw(35) << "Öğrenci Notu";
+	cout << left << setw(35) << "Ã–Ã°renci ID";
+	cout << left << setw(35) << "Ã–Ã°renci Ãsmi";
+	cout << left << setw(35) << "Ã–Ã°renci Notu";
 	cout << endl;
 	cout << left << setw(35) << "-------------";
 	cout << left << setw(35) << "-------------";
@@ -216,9 +216,9 @@ void listelemeMenusu(struct student* student, int& studentNumber) {
 	}
 }
 /**
-* @brief				: Bu fonksiyon ogrencilerin notlarini buyukten kucuge siralar.
+* @brief			: Bu fonksiyon ogrencilerin notlarini buyukten kucuge siralar.
 * @param student		: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
+* @param studentNumber		: Ogrenci sayisidir.
 */
 void Siralama(struct student* student, int& studentNumber) {
 	for (int i = 0; i < studentNumber - 1; i++)
@@ -233,9 +233,9 @@ void Siralama(struct student* student, int& studentNumber) {
 	}
 }
 /**
-* @brief				: Bu fonksiyon istenen k. en buyuk degeri ekrana yazdirir.
+* @brief			: Bu fonksiyon istenen k. en buyuk degeri ekrana yazdirir.
 * @param student		: Struct olarak alinan  ogrenci objesidir
-* @param studentNumber	: Ogrenci sayisidir.
+* @param studentNumber		: Ogrenci sayisidir.
 */
 void K_enBuyuk(struct student* student, int& studentNumber) {
 
@@ -244,7 +244,7 @@ void K_enBuyuk(struct student* student, int& studentNumber) {
 
 	while (true)
 	{
-		cout << "k değerini giriniz :";
+		cout << "k deÃ°erini giriniz :";
 		cin >> k_index;
 
 		if (k_index <= studentNumber)
@@ -253,55 +253,55 @@ void K_enBuyuk(struct student* student, int& studentNumber) {
 			{
 				if (student[k_index - 1].grade == student[i].grade)
 				{
-					cout << "Azalan sıralamadaki " << k_index << ". not -> " << student[i].grade << " ( " << student[i].id << " , " << student[i].name << " isimli öğrenci )" << endl;
+					cout << "Azalan sÃ½ralamadaki " << k_index << ". not -> " << student[i].grade << " ( " << student[i].id << " , " << student[i].name << " isimli Ã¶Ã°renci )" << endl;
 				}
 			}
 			break;
 		}
 		else {
-			cout << "Yeterli öğrenci mevcudu yoktur lütfen sınıf mevcudunu kontrol ediniz" << endl;
+			cout << "Yeterli Ã¶Ã°renci mevcudu yoktur lÃ¼tfen sÃ½nÃ½f mevcudunu kontrol ediniz" << endl;
 		}
 	}
 }
 /**
-* @brief				: Bu fonksiyon alinan notlarin min max ortalama ve k.en buyuk degerin bulunmasini saglar .
+* @brief			: Bu fonksiyon alinan notlarin min max ortalama ve k.en buyuk degerin bulunmasini saglar .
 * @param *student		: Struct olarak alinan  ogrenci objesidir.
-* @param studentNumber	: Ogrenci sayisidir.
+* @param studentNumber		: Ogrenci sayisidir.
 */
 void istatislikMenusu(struct student* student, int& studentNumber) {
 
 	float temp;
-	char seçim1;
-	cout << "[1] m: min/mak/ort \n[2] k: k. en büyük \n" << "Seçim yapınız:";
-	cin >> seçim1;
-	if (seçim1 == 'm' || seçim1 == 'M')// max-min 
+	char seÃ§im1;
+	cout << "[1] m: min/mak/ort \n[2] k: k. en bÃ¼yÃ¼k \n" << "SeÃ§im yapÃ½nÃ½z:";
+	cin >> seÃ§im1;
+	if (seÃ§im1 == 'm' || seÃ§im1 == 'M')// max-min 
 	{
 		MinMaxYazdirma(student, studentNumber);
 		temp = Ortalama(student, studentNumber);
 		cout << "Ortalama :" << temp << endl;
 	}
-	else if (seçim1 == 'k' || seçim1 == 'K')// k.en buyuk deger
+	else if (seÃ§im1 == 'k' || seÃ§im1 == 'K')// k.en buyuk deger
 	{
 		K_enBuyuk(student, studentNumber);
 	}
 	else if (cin.fail())
 	{
-		cout << "Yanliş giriş.Seçenekleri kontrol ediniz " << endl;
+		cout << "YanliÃ¾ giriÃ¾.SeÃ§enekleri kontrol ediniz " << endl;
 		system("pause");
 		exit(0);
 	}
 }
 /**
-* @brief				: Bu fonksiyon ekrana ana menuyu yazdiran ve secim yapmamizi saglayan kod parcacigidir .
+* @brief			: Bu fonksiyon ekrana ana menuyu yazdiran ve secim yapmamizi saglayan kod parcacigidir .
 * @param *student		: Struct olarak alinan  ogrenci objesidir.
-* @see main				: fonksiyonun hangi amacla cagirildigini inceleyiniz.
+* @see main			: fonksiyonun hangi amacla cagirildigini inceleyiniz.
 */
 void anaMenu(struct student* student, int& studentNumber)
 {
 	char secim;
 	do {
 		system("color A");
-		cout << "Secim giriniz (Listele[l/L] / Değiştir[d/D] / Istatistik[i/I]): ";
+		cout << "Secim giriniz (Listele[l/L] / DeÃ°iÃ¾tir[d/D] / Istatistik[i/I]): ";
 		cin >> secim;
 		cout << endl;
 
@@ -313,7 +313,7 @@ void anaMenu(struct student* student, int& studentNumber)
 		{
 			DegisimMenusu(student, studentNumber);
 		}
-		else if (secim == 'İ' || secim == 'i')
+		else if (secim == 'Ã' || secim == 'i')
 		{
 			istatislikMenusu(student, studentNumber);
 		}
@@ -323,7 +323,7 @@ void anaMenu(struct student* student, int& studentNumber)
 		}
 		else
 		{
-			cout << "Hatalı işlem yaptınız yeniden başlatınız !!!" << endl;
+			cout << "HatalÃ½ iÃ¾lem yaptÃ½nÃ½z yeniden baÃ¾latÃ½nÃ½z !!!" << endl;
 			anaMenu(student, studentNumber);
 		}
 	} while (secim != 'Q' || secim != 'q');
@@ -333,12 +333,12 @@ void main()
 	setlocale(LC_ALL, "Turkish");
 	int number;
 	cout << endl;
-	cout << "Öğrenci sayısını giriniz: ";
+	cout << "Ã–grenci sayÃ½sÃ½nÃ½ giriniz: ";
 	cin >> number;
 	if (number == 0 || number < 0)
 	{
-		cout << "Hata Lütfen pozitif bir sayı giriniz !!!!" << endl;
-		cout << "Sistemi tekrar başlatınız!!!" << endl;
+		cout << "Hata LÃ¼tfen pozitif bir sayÃ½ giriniz !!!!" << endl;
+		cout << "Sistemi tekrar baÃ¾latÃ½nÃ½z!!!" << endl;
 	}
 	else
 	{
