@@ -1,0 +1,3 @@
+this is a sample text file! it is created to show you how the output items must
+be listed. carefully examine the examples. in the lab, you must be able to obtain
+the desired output according to the attached file.
