@@ -5,7 +5,7 @@ int numOfMembers = 0;
 int spamNum = 0;
 using namespace std;
 /**
-* @brief					: Bu fonksiyon stack constructordir.
+* @brief				: Bu fonksiyon stack constructordir.
 * @param top				: Stack yapisinin basini tutar.
 * @param stackSize			: Stack boyutu.
 */
@@ -14,12 +14,12 @@ Stack::Stack() {
 	stackSize = 5;
 }
 /**
-* @brief					:  Bu fonksiyon stack yapisinin yikici fonksiyonudur (destructor).
+* @brief				:  Bu fonksiyon stack yapisinin yikici fonksiyonudur (destructor).
 */
 Stack::~Stack() {
 }
 /**
-* @brief					: Bu fonksiyon stack yapisine eleman eklenmesini saðlar.
+* @brief				: Bu fonksiyon stack yapisine eleman eklenmesini saÃ°lar.
 * @param val				: Stack yapisinin basini tutar.
 * @param Message			: Gonderilen email.
 * @param topic				: Gonderilen emailin mesajin konusu.
@@ -53,29 +53,29 @@ void Stack::pop() {
 	numOfMembers--;
 }
 /**
-* @brief					: Bu fonksiyon stack yapisindaki eleman sayisini dondurur.
-* @return					: Email kutusundaki eleman sayisi.
+* @brief				: Bu fonksiyon stack yapisindaki eleman sayisini dondurur.
+* @return				: Email kutusundaki eleman sayisi.
 */
 int Stack::Count() {
 	return numOfMembers;
 }
 /**
-* @brief					: Bu fonksiyon stack yapisindaki spam sayisini dondurur.
-* @return					: Email kutusundaki spam sayisi.
+* @brief				: Bu fonksiyon stack yapisindaki spam sayisini dondurur.
+* @return				: Email kutusundaki spam sayisi.
 */
 int Stack::spamCount() {
 	return spamNum;
 }
 /**
-* @brief					: Bu fonksiyon stack yapisinin bos olma durumunu dondurur.
-* @return					: True-False.
+* @brief				: Bu fonksiyon stack yapisinin bos olma durumunu dondurur.
+* @return				: True-False.
 */
 bool Stack::stackEmpty() {
 	return(top == NULL);
 }
 /**
-* @brief					: Bu fonksiyon stack yapisinin dolu olma durumunu dondurur.
-* @return					: True-False.
+* @brief				: Bu fonksiyon stack yapisinin dolu olma durumunu dondurur.
+* @return				: True-False.
 */
 bool Stack::stackFull() {
 	return (numOfMembers == stackSize);
