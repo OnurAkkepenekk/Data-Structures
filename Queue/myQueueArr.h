@@ -3,14 +3,14 @@
 using namespace std;
 /**
 * @brief					: Class yapisi olusturulur ve icine gerekli fonksiyonlar yazilir.Ek olarak class icine bir struct olusturdum ve girilen bilgileri hafizada tuttum.
-* @param kuyruk_bas			: Kuyrugun basini tutar.
-* @param kuyruk_son			: Kuyrugun sonunu tutar.
-* @param hasta_sayisi		: Kuyruktaki eleman sayisini tutar.
-* @param erkek				: Kuyruktaki erkek sayisini tutan sayactir.
-* @param kadin				: Kuyruktaki kadin sayisi tutan sayactir.
-* @param toplam_hasta_sayısı: Kuyruktaki toplam hasta sayisini tutan sayactir.
-* @param muayene			: Muayene amacli gelen hasta sayisini tutmak icin kullanilan sayactir.
-* @param tahlil				: Tahlil amacli gelen hasta sayisini tutmak icin kullanilan sayactir.
+* @param kuyruk_bas				: Kuyrugun basini tutar.
+* @param kuyruk_son				: Kuyrugun sonunu tutar.
+* @param hasta_sayisi				: Kuyruktaki eleman sayisini tutar.
+* @param erkek					: Kuyruktaki erkek sayisini tutan sayactir.
+* @param kadin					: Kuyruktaki kadin sayisi tutan sayactir.
+* @param toplam_hasta_sayÄ±sÄ±			: Kuyruktaki toplam hasta sayisini tutan sayactir.
+* @param muayene				: Muayene amacli gelen hasta sayisini tutmak icin kullanilan sayactir.
+* @param tahlil					: Tahlil amacli gelen hasta sayisini tutmak icin kullanilan sayactir.
 */
 
 class Queue {
@@ -47,7 +47,7 @@ public:
 	*/
 	void hasta_erkek_kadin_orani();
 	/**
-	* @brief				: Bu fonksiyon hastalarin hastaneye gelme sebeblerine göre sayilarini yazdirir.
+	* @brief				: Bu fonksiyon hastalarin hastaneye gelme sebeblerine gÃ¶re sayilarini yazdirir.
 	*/
 	void tahlil_muayene_sayisi();
 	/**
@@ -60,12 +60,12 @@ public:
 	void menu();
 	/**
 	* @brief				: Menudeki secimlere gore islem yapar.
-	* @param secim			: Menudeden secilen islem turudur.
+	* @param secim				: Menudeden secilen islem turudur.
 	*/
 	void secenekler(int);
 private:
 
-	int sıraGenisligi = 8;//kuyruk boyutunu	
+	int sÄ±raGenisligi = 8;//kuyruk boyutunu	
 	int kuyruk_bas;
 	int kuyruk_son;
 	int hasta_sayisi;
@@ -84,5 +84,5 @@ private:
 		char cinsiyet;
 		int yas;
 	};
-	hasta* kuyruk = new  hasta[sıraGenisligi];//Dinamic hafiza kullanarak yer ayirdim.	 
+	hasta* kuyruk = new  hasta[sÄ±raGenisligi];//Dinamic hafiza kullanarak yer ayirdim.	 
 };
