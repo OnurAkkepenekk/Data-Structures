@@ -5,14 +5,14 @@
 using namespace std;
 /**
 * @brief					: Bu fonksiyon kuyruk constructordir.
-* @param kuyruk_bas			: Kuyrugun basini tutar.
-* @param kuyruk_son			: Kuyrugun sonunu tutar.
-* @param hasta_sayisi		: Kuyruktaki eleman sayisini tutar.
-* @param erkek				: Kuyruktaki erkek sayisini tutan sayactir.
-* @param kadin				: Kuyruktaki kadin sayisi tutan sayactir.
-* @param toplam_hasta_sayısı: Kuyruktaki toplam hasta sayisini tutan sayactir.
-* @param muayene			: Muayene amacli gelen hasta sayisini tutmak icin kullanilan sayactir.
-* @param tahlil				: Tahlil amacli gelen hasta sayisini tutmak icin kullanilan sayactir.
+* @param kuyruk_bas				: Kuyrugun basini tutar.
+* @param kuyruk_son				: Kuyrugun sonunu tutar.
+* @param hasta_sayisi				: Kuyruktaki eleman sayisini tutar.
+* @param erkek					: Kuyruktaki erkek sayisini tutan sayactir.
+* @param kadin					: Kuyruktaki kadin sayisi tutan sayactir.
+* @param toplam_hasta_sayÄ±sÄ±			: Kuyruktaki toplam hasta sayisini tutan sayactir.
+* @param muayene				: Muayene amacli gelen hasta sayisini tutmak icin kullanilan sayactir.
+* @param tahlil					: Tahlil amacli gelen hasta sayisini tutmak icin kullanilan sayactir.
 */
 
 Queue::Queue()//kuyruk constructor
@@ -38,7 +38,7 @@ bool Queue::kuyruk_bos()
 * @brief				: Bu fonksiyon kuyruk yapisinin dolu olup olmadigini kontrol eder.
 */
 bool Queue::kuyruk_dolu() {
-	return(hasta_sayisi == sıraGenisligi);
+	return(hasta_sayisi == sÄ±raGenisligi);
 }
 /**
 * @brief				: Bu fonksiyon kuyruk yapisina hasta ekler.
@@ -52,27 +52,27 @@ void Queue::hasta_ekle() {
 	else
 	{
 		int adet;
-		cout << "Kaç adet eklensin :";
+		cout << "KaÃ§ adet eklensin :";
 		cin >> adet;
 
 		for (int i = 0; i < adet; i++)
 		{
-			if (kuyruk_son > sıraGenisligi - 1)
+			if (kuyruk_son > sÄ±raGenisligi - 1)
 			{
-				cout << "Hasta Kabul işlemleri dolmuştur...!!!" << endl;
+				cout << "Hasta Kabul iÅŸlemleri dolmuÅŸtur...!!!" << endl;
 				break;
 			}
 
-			cout << i + 1 << ". hastanın adını giriniz: ";
+			cout << i + 1 << ". hastanÄ±n adÄ±nÄ± giriniz: ";
 			cin >> kuyruk[kuyruk_son].name;
 
-			cout << i + 1 << ". hastanın hangi amaçla geldiğini belirtiniz ([M]-Muayene [T]-Tahlil gösterme):";
+			cout << i + 1 << ". hastanÄ±n hangi amaÃ§la geldiÄŸini belirtiniz ([M]-Muayene [T]-Tahlil gÃ¶sterme):";
 			cin >> kuyruk[kuyruk_son].amac;
 
-			cout << i + 1 << ". hastanın yaşını giriniz: ";
+			cout << i + 1 << ". hastanÄ±n yaÅŸÄ±nÄ± giriniz: ";
 			cin >> kuyruk[kuyruk_son].yas;
 
-			cout << i + 1 << ".hastanın cinsiyetini giriniz [E]/[K] :";
+			cout << i + 1 << ".hastanÄ±n cinsiyetini giriniz [E]/[K] :";
 			cin >> kuyruk[kuyruk_son].cinsiyet;
 
 			//kadin erkek sayisini saydirdim.
@@ -95,7 +95,7 @@ void Queue::hasta_ekle() {
 			hasta_sayisi++;
 			kuyruk_son++;
 		}
-		cout << "Işleminiz gerçekleştirilmiştir" << endl;
+		cout << "IÅŸleminiz gerÃ§ekleÅŸtirilmiÅŸtir" << endl;
 	}
 }
 /**
@@ -106,7 +106,7 @@ void Queue::hasta_sil()
 	if (kuyruk_bos())
 	{
 		cout << endl << endl;
-		cout << "Listeniz boştur ..." << endl;
+		cout << "Listeniz boÅŸtur ..." << endl;
 	}
 	else
 	{
@@ -126,8 +126,8 @@ void Queue::hasta_sil()
 			tahlil--;
 		}
 
-		//işi biten kuyruktan cıkar.
-		cout << kuyruk[0].name << " isimli hastanın işlemleri bitmiş olup kuyruktan çıkarılmıştır" << endl;
+		//iÅŸi biten kuyruktan cÄ±kar.
+		cout << kuyruk[0].name << " isimli hastanÄ±n iÅŸlemleri bitmiÅŸ olup kuyruktan Ã§Ä±karÄ±lmÄ±ÅŸtÄ±r" << endl;
 		for (int i = 0; i < kuyruk_son - 1; i++)
 		{
 			kuyruk[i] = kuyruk[i + 1];
@@ -146,10 +146,10 @@ void Queue::hastalari_listele() {
 		cout << "ListeBos" << endl;
 	}
 	else {
-		cout << left << setw(35) << "Hastanın Adı";
-		cout << left << setw(35) << "Hastanın Yaşı";
-		cout << left << setw(35) << "Hastanın Cinsiyeti";
-		cout << left << setw(35) << "Hastanın Amacı ";
+		cout << left << setw(35) << "HastanÄ±n AdÄ±";
+		cout << left << setw(35) << "HastanÄ±n YaÅŸÄ±";
+		cout << left << setw(35) << "HastanÄ±n Cinsiyeti";
+		cout << left << setw(35) << "HastanÄ±n AmacÄ± ";
 		cout << endl;
 		cout << left << setw(35) << "-------------";
 		cout << left << setw(35) << "-------------";
@@ -180,7 +180,7 @@ void Queue::hasta_erkek_kadin_orani() {
 		ortalama = (float)(erkek * 100) / hasta_sayisi;
 		cout << "Hasta Erkek orani: %" << ortalama << endl;
 		ortalama = (float)(kadin * 100) / hasta_sayisi;
-		cout << "Hasta Kadın oranı : %" << ortalama;
+		cout << "Hasta KadÄ±n oranÄ± : %" << ortalama;
 	}
 }
 /**
@@ -189,7 +189,7 @@ void Queue::hasta_erkek_kadin_orani() {
 void Queue::hasta_yas_ortalamasi() {
 	if (kuyruk_bos())
 	{
-		cout << "Kuyrukta hasta kalmamıştır !!!\n\n ";
+		cout << "Kuyrukta hasta kalmamÄ±ÅŸtÄ±r !!!\n\n ";
 	}
 	else
 	{
@@ -199,26 +199,26 @@ void Queue::hasta_yas_ortalamasi() {
 			yasOrt += kuyruk[i].yas;
 		}
 		yasOrt = (float)yasOrt / hasta_sayisi;
-		cout << "Kuyruktaki hastaların yaş ortalaması:" << yasOrt << endl;
+		cout << "Kuyruktaki hastalarÄ±n yaÅŸ ortalamasÄ±:" << yasOrt << endl;
 	}
 }
 /**
-* @brief				: Bu fonksiyon hastalarin hastaneye gelme sebeblerine göre sayilarini yazdirir.
+* @brief				: Bu fonksiyon hastalarin hastaneye gelme sebeblerine gÃ¶re sayilarini yazdirir.
 */
 void Queue::tahlil_muayene_sayisi()
 {
-	cout << "Muayene olmak için bekleyen hasta sayısı :" << muayene << endl;
-	cout << "Tahlillerini göstermek için gelen hasta sayısı:" << tahlil;
+	cout << "Muayene olmak iÃ§in bekleyen hasta sayÄ±sÄ± :" << muayene << endl;
+	cout << "Tahlillerini gÃ¶stermek iÃ§in gelen hasta sayÄ±sÄ±:" << tahlil;
 }
 /**
 * @brief				: Bu fonksiyon hastanenin gunluk kazancini hesaplar.
 */
 void Queue::hastanenin_gunluk_kazanci() const
 {
-	int ücret = 0;
-	cout << "Hastanede tedavi sırasi alan her hastanın giriş ücreti 300 TL (Her şey dahil) " << endl;
-	ücret = toplam_hasta_sayisi * 300;
-	cout << "Hastanenin günlük kazancı : " << ücret;
+	int Ã¼cret = 0;
+	cout << "Hastanede tedavi sÄ±rasi alan her hastanÄ±n giriÅŸ Ã¼creti 300 TL (Her ÅŸey dahil) " << endl;
+	Ã¼cret = toplam_hasta_sayisi * 300;
+	cout << "Hastanenin gÃ¼nlÃ¼k kazancÄ± : " << Ã¼cret;
 }
 /**
 * @brief				: Menu fonksiyonudur.
@@ -229,22 +229,22 @@ void Queue::menu() {
 	{
 		cout << endl;
 		system("color A");
-		cout << "                ANA MENÜ                 ";
+		cout << "                ANA MENÃœ                 ";
 		cout << "\n---------------------------------------" << endl;
-		cout << "[1]-Sıraya hasta ekle\n";
-		cout << "[2]-Sıradan hasta silme \n";
-		cout << "[3]-Sırayı listele \n";
-		cout << "[4]-Sıradaki yaş ortalaması \n";
-		cout << "[5]-Kuyruktaki kadın / erkek sayısı \n";
-		cout << "[6]-Hastaların geliş sebebine göre sayısı \n";
-		cout << "[7]-Hastanenin günlük kazancı \n";
-		cout << "[8]-Çıkıs \n";
-		cout << "\n Seçim yapınız: ";
+		cout << "[1]-SÄ±raya hasta ekle\n";
+		cout << "[2]-SÄ±radan hasta silme \n";
+		cout << "[3]-SÄ±rayÄ± listele \n";
+		cout << "[4]-SÄ±radaki yaÅŸ ortalamasÄ± \n";
+		cout << "[5]-Kuyruktaki kadÄ±n / erkek sayÄ±sÄ± \n";
+		cout << "[6]-HastalarÄ±n geliÅŸ sebebine gÃ¶re sayÄ±sÄ± \n";
+		cout << "[7]-Hastanenin gÃ¼nlÃ¼k kazancÄ± \n";
+		cout << "[8]-Ã‡Ä±kÄ±s \n";
+		cout << "\n SeÃ§im yapÄ±nÄ±z: ";
 		cin >> secim;
 		cout << endl;
 		if (cin.fail())
 		{
-			cout << "Hatalı bir giris yaptınız...";
+			cout << "HatalÄ± bir giris yaptÄ±nÄ±z...";
 			Sleep(999);
 			cin.clear();
 			cin.ignore(10, '\n');
@@ -252,7 +252,7 @@ void Queue::menu() {
 		}
 		else if (secim < 0 || secim>9)
 		{
-			cout << "Hatalı bir giris yaptınız....";
+			cout << "HatalÄ± bir giris yaptÄ±nÄ±z....";
 			Sleep(999);
 			cin.clear();
 			cin.ignore(10, '\n');
@@ -269,7 +269,7 @@ void Queue::menu() {
 }
 /**
 * @brief				: Menudeki secimlere gore islem yapar.
-* @param secim			: Menudeden secilen islem turudur.
+* @param secim				: Menudeden secilen islem turudur.
 */
 void Queue::secenekler(int secim)
 {
