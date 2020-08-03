@@ -3,13 +3,13 @@
 #include<iomanip>
 using namespace std;
 /**
-* @brief					: Bu fonksiyon binaryTree constructordir.
+* @brief				: Bu fonksiyon binaryTree constructordir.
 */
 BTS::BTS() {
 
 };
 /**
-* @brief					: Bu fonksiyon binarytreeye veri ekler.
+* @brief				: Bu fonksiyon binarytreeye veri ekler.
 * @param key				: Eklenecek olan tamsayi.
 */
 void BTS::Insert(int key, int grade) {
@@ -50,7 +50,7 @@ void BTS::Insert(int key, int grade) {
 	}
 }
 /**
-* @brief					: Bu fonksiyon agac yapisindan veri siler.
+* @brief				: Bu fonksiyon agac yapisindan veri siler.
 * @param root				: Eklenme yapilacak olan agac.
 * @param deleteKey			: Silinmesi istenen veri numarasi.
 */
@@ -117,7 +117,7 @@ BTS::BinaryTree_Nodes* BTS::Delete(BinaryTree_Nodes* root, int deleteKey) {
 	return root;
 }
 /**
-* @brief					: Bu fonksiyon agac yapisindan aranan verinin olup olmadigini inceler.
+* @brief				: Bu fonksiyon agac yapisindan aranan verinin olup olmadigini inceler.
 * @param root				: Aranacak olan agac.
 * @param key				: Aranmasi istenen veri numarasi.
 */
@@ -135,7 +135,7 @@ BTS::BinaryTree_Nodes* BTS::Find(BinaryTree_Nodes* root, int key) {
 	}
 }
 /**
-* @brief					: Bu fonksiyon agac yapisinda yer alan en kucuk elemanin nodesini bulur.
+* @brief				: Bu fonksiyon agac yapisinda yer alan en kucuk elemanin nodesini bulur.
 * @param root				: Arama yapilacak olan agac.
 */
 BTS::BinaryTree_Nodes* BTS::Min(BinaryTree_Nodes* root) {
@@ -150,7 +150,7 @@ BTS::BinaryTree_Nodes* BTS::Min(BinaryTree_Nodes* root) {
 }
 
 /**
-* @brief					: Bu fonksiyon agac yapisindaki verileri preorder olarak yazdirir.
+* @brief				: Bu fonksiyon agac yapisindaki verileri preorder olarak yazdirir.
 * @param root				: Siralama yapilacak olan agac.
 */
 void BTS::printPreorder(BinaryTree_Nodes* root)
@@ -162,7 +162,7 @@ void BTS::printPreorder(BinaryTree_Nodes* root)
 	printPreorder(root->right);
 }
 /**
-* @brief					: Bu fonksiyon agac yapisindaki verileri inorder olarak yazdirir.
+* @brief				: Bu fonksiyon agac yapisindaki verileri inorder olarak yazdirir.
 * @param root				: Siralama yapilacak olan agac.
 */
 void BTS::printInorder(BinaryTree_Nodes* root) {
@@ -173,7 +173,7 @@ void BTS::printInorder(BinaryTree_Nodes* root) {
 	printInorder(root->right);
 }
 /**
-* @brief					: Bu fonksiyon agac yapisindaki verileri postorder olarak yazdirir.
+* @brief				: Bu fonksiyon agac yapisindaki verileri postorder olarak yazdirir.
 * @param root				: Siralama yapilacak olan agac.
 */
 void BTS::printPostorder(BinaryTree_Nodes* root)
@@ -185,7 +185,7 @@ void BTS::printPostorder(BinaryTree_Nodes* root)
 	cout << root->key << " ";
 }
 /**
-* @brief					: Bu fonksiyon agac yapisindaki yer alan ayni verileri tutar.
+* @brief				: Bu fonksiyon agac yapisindaki yer alan ayni verileri tutar.
 * @param root				: Arama yapilacak olan agac.
 * @param key				: Ayni olma ihtimali olan veri.
 * @param same_num			: Ayni olan veri sayisi.
@@ -200,9 +200,9 @@ void BTS::same_number(BinaryTree_Nodes* root, int key, int& same_num) {
 	}
 }
 /**
-* @brief					: Bu fonksiyon agac yapisindaki verileri binaryTree seklinde ekrana bastirir.
+* @brief				: Bu fonksiyon agac yapisindaki verileri binaryTree seklinde ekrana bastirir.
 * @param root				: Yazdirma yapilacak olan agac.
-* @param n					: Ekrana bastirmak icin atilan bosluk sayisi.
+* @param n				: Ekrana bastirmak icin atilan bosluk sayisi.
 */
 void BTS::display(BinaryTree_Nodes* root, int n) {
 	if (root != NULL)
@@ -216,7 +216,7 @@ void BTS::display(BinaryTree_Nodes* root, int n) {
 	}
 }
 /**
-* @brief					: Bu fonksiyon agac yapisindaki yer alan yaprak sayisini yazdirir.
+* @brief				: Bu fonksiyon agac yapisindaki yer alan yaprak sayisini yazdirir.
 * @param root				: Arama yapilacak olan agac.
 */
 int BTS::leaf(BinaryTree_Nodes* root)
@@ -234,7 +234,7 @@ int BTS::leaf(BinaryTree_Nodes* root)
 	return count;
 }
 /**
-* @brief					: Bu fonksiyon agac yapisindaki verilerin toplamini hesaplar.
+* @brief				: Bu fonksiyon agac yapisindaki verilerin toplamini hesaplar.
 * @param root				: Toplama yapilacak olan agac.
 */
 int BTS::sumOfNumbers(BinaryTree_Nodes* root)
